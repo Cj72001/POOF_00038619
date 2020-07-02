@@ -8,8 +8,13 @@
       <e p="bin" t="ExcludeRecursive" />
       <e p="Controllers" t="Include">
         <e p="DBConnection.cs" t="Include" />
+        <e p="Proxy.cs" t="Include" />
+        <e p="RegisterController.cs" t="Include" />
+        <e p="UserController.cs" t="Include" />
       </e>
-      <e p="Model" t="Include" />
+      <e p="Model" t="Include">
+        <e p="User.cs" t="Include" />
+      </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="packages.config" t="Include" />
@@ -24,8 +29,21 @@
         <e p="Settings.settings" t="Include" />
       </e>
       <e p="Views" t="Include">
-        <e p="Form1.cs" t="Include" />
-        <e p="Form1.Designer.cs" t="Include" />
+        <e p="EmployeeControl.cs" t="Include" />
+        <e p="EmployeeControl.Designer.cs" t="Include" />
+        <e p="EmployeeControl.resx" t="Include" />
+        <e p="FrmLogin.cs" t="Include" />
+        <e p="FrmLogin.Designer.cs" t="Include" />
+        <e p="FrmLogin.resx" t="Include" />
+        <e p="FrmPassword.cs" t="Include" />
+        <e p="FrmPassword.Designer.cs" t="Include" />
+        <e p="FrmPassword.resx" t="Include" />
+        <e p="MainForm.cs" t="Include" />
+        <e p="MainForm.Designer.cs" t="Include" />
+        <e p="MainForm.resx" t="Include" />
+        <e p="SecurityControl.cs" t="Include" />
+        <e p="SecurityControl.Designer.cs" t="Include" />
+        <e p="SecurityControl.resx" t="Include" />
       </e>
     </e>
   </component>
