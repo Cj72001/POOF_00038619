@@ -29,8 +29,8 @@ C:\Users\omar flores\Desktop\Portafolio_ORFA_00038619_POO-0120\POOF_00038619\POO
 C:\Users\omar flores\Desktop\Portafolio_ORFA_00038619_POO-0120\POOF_00038619\POOF_00038619\POOF_00038619\obj\Debug\POOF_00038619.csproj.CopyComplete
 C:\Users\omar flores\Desktop\Portafolio_ORFA_00038619_POO-0120\POOF_00038619\POOF_00038619\POOF_00038619\obj\Debug\POOF_00038619.exe
 C:\Users\omar flores\Desktop\Portafolio_ORFA_00038619_POO-0120\POOF_00038619\POOF_00038619\POOF_00038619\obj\Debug\POOF_00038619.pdb
-C:\Users\omar flores\Desktop\Portafolio_ORFA_00038619_POO-0120\POOF_00038619\POOF_00038619\POOF_00038619\obj\Debug\POOF_00038619.FrmLogin.resources
 C:\Users\omar flores\Desktop\Portafolio_ORFA_00038619_POO-0120\POOF_00038619\POOF_00038619\POOF_00038619\obj\Debug\POOF_00038619.FrmPassword.resources
 C:\Users\omar flores\Desktop\Portafolio_ORFA_00038619_POO-0120\POOF_00038619\POOF_00038619\POOF_00038619\obj\Debug\POOF_00038619.EmployeeControl.resources
 C:\Users\omar flores\Desktop\Portafolio_ORFA_00038619_POO-0120\POOF_00038619\POOF_00038619\POOF_00038619\obj\Debug\POOF_00038619.SecurityControl.resources
-C:\Users\omar flores\Desktop\Portafolio_ORFA_00038619_POO-0120\POOF_00038619\POOF_00038619\POOF_00038619\obj\Debug\POOF_00038619.MainForm.resources
+C:\Users\omar flores\Desktop\Portafolio_ORFA_00038619_POO-0120\POOF_00038619\POOF_00038619\POOF_00038619\obj\Debug\POOF_00038619.FrmMain.resources
+C:\Users\omar flores\Desktop\Portafolio_ORFA_00038619_POO-0120\POOF_00038619\POOF_00038619\POOF_00038619\obj\Debug\POOF_00038619.AdministratorControl.resources

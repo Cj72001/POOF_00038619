@@ -29,21 +29,21 @@
         <e p="Settings.settings" t="Include" />
       </e>
       <e p="Views" t="Include">
+        <e p="AdministratorControl.cs" t="Include" />
+        <e p="AdministratorControl.Designer.cs" t="Include" />
+        <e p="AdministratorControl.resx" t="Include" />
         <e p="EmployeeControl.cs" t="Include" />
         <e p="EmployeeControl.Designer.cs" t="Include" />
         <e p="EmployeeControl.resx" t="Include" />
-        <e p="FrmLogin.cs" t="Include" />
         <e p="FrmLogin.Designer.cs" t="Include" />
         <e p="FrmLogin.resx" t="Include" />
+        <e p="FrmMain.cs" t="Include" />
         <e p="FrmPassword.cs" t="Include" />
         <e p="FrmPassword.Designer.cs" t="Include" />
         <e p="FrmPassword.resx" t="Include" />
-        <e p="MainForm.cs" t="Include" />
-        <e p="MainForm.Designer.cs" t="Include" />
-        <e p="MainForm.resx" t="Include" />
         <e p="SecurityControl.cs" t="Include" />
-        <e p="SecurityControl.Designer.cs" t="Include" />
-        <e p="SecurityControl.resx" t="Include" />
+        <e p="SecurityGuardControl.Designer.cs" t="Include" />
+        <e p="SecurityGuardControl.resx" t="Include" />
       </e>
     </e>
   </component>

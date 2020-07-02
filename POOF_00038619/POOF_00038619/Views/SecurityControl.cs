@@ -24,16 +24,21 @@ namespace POOF_00038619
             PoblarControlers();
         }
 
-        private void bttnEntrando_Click(object sender, EventArgs e)
+        private void BttnEntrando_Click(object sender, EventArgs e)
         {
             var usuario = (User) cmbUser.SelectedItem;
             RegisterController.EntryRegister(usuario, true, txtFecha.Text, txtHora.Text, Convert.ToInt32(nudTemperatura.Text));
         }
 
-        private void bttnSaliendo_Click(object sender, EventArgs e)
+        private void BttnSaliendo_Click(object sender, EventArgs e)
         {
             var usuario = (User) cmbUser.SelectedItem;
             RegisterController.ExitRegister(usuario, false, txtFecha.Text, txtHora.Text, Convert.ToInt32(nudTemperatura.Text));
+        }
+        
+        private void BtnUpdate_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = RegisterController.GetRegisterTable();
         }
     }
 }

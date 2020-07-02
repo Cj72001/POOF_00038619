@@ -5,12 +5,13 @@ using POOF_00038619.Model;
 
 namespace POOF_00038619
 {
-    public partial class FrmLogin : Form
+    public partial class FrmMain : Form
     {
         Proxy.IUsuario verificar = new Proxy.ProxyVerificacion();
         private EmployeeControl ec;
         private SecurityControl sc;
-        public FrmLogin()
+        private AdministratorControl ac;
+        public FrmMain()
         {
             InitializeComponent();
         }
@@ -19,11 +20,23 @@ namespace POOF_00038619
         {
             PoblarControlers();
             
-            //Instanciando ScoreControl
+            //Instanciando SecurityControl
+            sc = new SecurityControl();
+            sc.Dock = DockStyle.Fill;
+            sc.Width = Width;
+            sc.Height = Height;
+            
+            //Instanciando EmployeeControl
             ec = new EmployeeControl();
             ec.Dock = DockStyle.Fill;
             ec.Width = Width;
             ec.Height = Height;
+            
+            //Instanciando AdministratorControl
+            ac = new AdministratorControl();
+            ac.Dock = DockStyle.Fill;
+            ac.Width = Width;
+            ac.Height = Height;
         }
         
         
@@ -63,20 +76,20 @@ namespace POOF_00038619
                 {
                     MessageBox.Show("Bienvenido vigilante " + usuario.NombreUsuario);
                     
-                    //Abriendo ventana para vigilante:
-                    MainForm vigilante = new MainForm();
-                    vigilante.Show();
-                    this.Hide();
+                    //Cambiando el control que contiene actualemente el tableLayout por SecurityControl
+                    tableLayoutPanel1.Hide();
+                    Text = "Vigilante";
+                    Controls.Add(sc);
                 }
                 
                 //Administrador
                 else if (usuario.IdDepartamento.Equals("3"))
                 {
                     MessageBox.Show("Bienvenido administrador " + usuario.NombreUsuario);
-                    //Cambiando el control que contiene actualemente el tableLayout por ScoreControl
-                    // tableLayoutPanel1.Hide();
-                    // Text = "Empleado";
-                    // Controls.Add(ec);
+                    //Cambiando el control que contiene actualemente el tableLayout por AdministratorControl
+                    tableLayoutPanel1.Hide();
+                    Text = "Administrador";
+                    Controls.Add(ac);
                 }
                     
                 

@@ -61,8 +61,8 @@ namespace POOF_00038619.Controllers
 
             try
             {
-                tableUsuarios = DBConnection.ExecuteQuery($"SELECT * FROM REGISTRO" +
-                                                          $"WHERE idUsuario = {user.IdUsuario}");
+                tableUsuarios = DBConnection.ExecuteQuery($"SELECT * FROM REGISTRO " +
+                                                          $"WHERE idUsuario = {user.IdUsuario} ");
             }
             catch (Exception ex)
             {
@@ -98,7 +98,7 @@ namespace POOF_00038619.Controllers
                 DBConnection.ExecuteNonQuery("INSERT INTO REGISTRO(idUsuario, entrada, fecha, hora, temperatura)" +
                                              $" VALUES('{usuario.IdUsuario}', '{entrada}', '{fecha}', '{hora}', '{temperatura}')");
 
-                MessageBox.Show("Usuario " + usuario.NombreUsuario + " ha entrado");
+                MessageBox.Show("Usuario " + usuario.NombreUsuario + " ha salido");
             }
             catch(Exception ex)
             {
