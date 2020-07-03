@@ -7,7 +7,7 @@ namespace POOF_00038619
 {
     public partial class FrmMain : Form
     {
-        private Proxy.IUsuario verificar;
+        private Proxy.IUsuario verificar = new Proxy.ProxyVerificacion();
         private EmployeeControl ec;
         private SecurityControl sc;
         private AdministratorControl ac;
@@ -38,8 +38,6 @@ namespace POOF_00038619
             ac.Width = Width;
             ac.Height = Height;
             
-            //Instanciando proxy
-            verificar = new Proxy.ProxyVerificacion();
         }
         
         
