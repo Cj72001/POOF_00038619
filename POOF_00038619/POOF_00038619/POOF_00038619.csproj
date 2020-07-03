@@ -96,9 +96,11 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Controllers\DBConnection.cs" />
+        <Compile Include="Controllers\DepartmentsController.cs" />
         <Compile Include="Controllers\Proxy.cs" />
         <Compile Include="Controllers\RegisterController.cs" />
         <Compile Include="Controllers\UserController.cs" />
+        <Compile Include="Model\Departament.cs" />
         <Compile Include="Model\User.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />

@@ -26,8 +26,8 @@ namespace POOF_00038619.Controllers
             {
                 usuarios.Add(new User
                 (
-                    dr[0].ToString(),
-                    dr[1].ToString(),
+                    Convert.ToInt32(dr[0].ToString()),
+                    Convert.ToInt32(dr[1].ToString()),
                     dr[2].ToString(),
                     dr[3].ToString(),
                     dr[4].ToString(),
@@ -56,7 +56,7 @@ namespace POOF_00038619.Controllers
             return tableUsuarios;
         }
 
-        public static void UpdatePassword(string idUsuario, string nueva)
+        public static void UpdatePassword(int idUsuario, string nueva)
         {
             try
             {
@@ -71,17 +71,39 @@ namespace POOF_00038619.Controllers
             }
         }
 
-        public static void CreateUser(string usuario)
+        public static void CreateUser(int idDepartamento, string nombre, string apellido, string contrasena, string dui, string fechaNacimiento)
         {
             try
             {
                 
-                DBConnection.ExecuteNonQuery("INSERT INTO USUARIO(nombre, contrasenia, tipo)" +
-                    $" VALUES('{usuario}', '{usuario}', false)");
+                DBConnection.ExecuteNonQuery($"INSERT INTO USUARIO (idDepartamento, nombre, apellido, contrasena, dui, fechaNacimiento) VALUES("  +
+                                             $"{idDepartamento}," +
+                                             $"'{nombre}'," + 
+                                             $"'{apellido}'," +
+                                             $"'{contrasena}'," +
+                                             $"'{dui}'," + 
+                                             $"'{fechaNacimiento}')");
 
                 MessageBox.Show("Se ha agregado el nuevo usuario, contrasenia igual al nombre");
             }
             catch(Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error");
+            }
+        }
+        
+        public static void DeleteUser(int idUsuario)
+        {
+            try
+            {
+                
+                DBConnection.ExecuteNonQuery($"DELETE FROM USUARIO " +
+                                             $"WHERE idUsuario = '{idUsuario}'"); 
+            
+                MessageBox.Show("Se ha eliminado el usuario");
+                
+            }
+            catch (Exception exception)
             {
                 MessageBox.Show("Ha ocurrido un error");
             }

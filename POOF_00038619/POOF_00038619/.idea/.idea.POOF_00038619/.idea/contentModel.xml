@@ -8,11 +8,13 @@
       <e p="bin" t="ExcludeRecursive" />
       <e p="Controllers" t="Include">
         <e p="DBConnection.cs" t="Include" />
+        <e p="DepartmentsController.cs" t="Include" />
         <e p="Proxy.cs" t="Include" />
         <e p="RegisterController.cs" t="Include" />
         <e p="UserController.cs" t="Include" />
       </e>
       <e p="Model" t="Include">
+        <e p="Departament.cs" t="Include" />
         <e p="User.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />

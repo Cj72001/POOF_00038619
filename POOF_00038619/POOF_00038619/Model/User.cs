@@ -2,9 +2,9 @@
 {
     public class User
     {
-        public string IdUsuario { get;}
+        public int IdUsuario { get;}
         
-        public string IdDepartamento { get;}
+        public int IdDepartamento { get;}
 
         public string NombreUsuario { get;}
 
@@ -16,7 +16,7 @@
         
         public string Contrasena { get;}
         
-        public User(string idUsuario, string idDepartamento, string nombreUsuario, string appellidoUsuario, string dui, string fechaNacimientoUsuario, string contrasena)
+        public User(int idUsuario, int idDepartamento, string nombreUsuario, string appellidoUsuario, string dui, string fechaNacimientoUsuario, string contrasena)
         {
             IdUsuario = idUsuario;
             IdDepartamento = idDepartamento;

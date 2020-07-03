@@ -7,38 +7,7 @@ namespace POOF_00038619.Controllers
 {
     public class RegisterController
     {
-        // public static List<User> GetUsers()
-        // {
-        //     var usuarios = new List<User>();
-        //     DataTable tableUsuarios = null;
-        //
-        //     try
-        //     {
-        //         tableUsuarios = DBConnection.ExecuteQuery("SELECT * FROM USUARIO");
-        //     }
-        //     catch(Exception ex)
-        //     {
-        //         MessageBox.Show("Ha ocurrido un error");
-        //     }
-        //
-        //     foreach(DataRow dr in tableUsuarios.Rows)
-        //     {
-        //         usuarios.Add(new User
-        //         (
-        //             dr[0].ToString(),
-        //             dr[1].ToString(),
-        //             dr[2].ToString(),
-        //             dr[3].ToString(),
-        //             dr[4].ToString(),
-        //             dr[5].ToString(),
-        //         dr[6].ToString()
-        //             )
-        //         );
-        //     }
-        //     
-        //     return usuarios;
-        // }
-
+        
         public static DataTable GetRegisterTable()
         {
             DataTable tableUsuarios = null;
@@ -71,6 +40,45 @@ namespace POOF_00038619.Controllers
 
             return tableUsuarios;
         }
+        
+        public static DataTable GetUsersIn()
+        {
+            DataTable tableUsuarios = null;
+
+            try
+            {
+                tableUsuarios = DBConnection.ExecuteQuery($"SELECT usu.nombre, reg.entrada " +
+                                                          "FROM USUARIO usu, REGISTRO reg " +
+                                                          $"WHERE entrada = {true} ");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error");
+            }
+
+            return tableUsuarios;
+        }
+        
+        public static DataTable GetDC()
+        {
+            DataTable tableUsuarios = null;
+
+            try
+            {
+                tableUsuarios = DBConnection.ExecuteQuery($"SELECT d.nombre, count(u.idDepartamento) as frecuencia " +
+                                                          $"FROM REGISTRO r, DEPARTAMENTO d, USUARIO u " +
+                                                          $"WHERE r.idUsuario = u.idUsuario AND d.idDepartamento = u.idDepartamento "+
+                                                          $"GROUP BY d.idDepartamento Order BY frecuencia DESC LIMIT 1 ");
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error");
+            }
+
+            return tableUsuarios;
+        }
+        
 
         //Registrando la entrada:
         public static void EntryRegister(User usuario, bool entrada, string fecha, string hora, int temperatura)
@@ -105,5 +113,7 @@ namespace POOF_00038619.Controllers
                 MessageBox.Show("Ha ocurrido un error");
             }
         }
+        
+        
     }
 }
