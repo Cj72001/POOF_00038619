@@ -60,7 +60,7 @@ namespace POOF_00038619
             if (respuesta)
             {
                 //Empleado
-                if (usuario.IdDepartamento.Equals("1"))
+                if (usuario.IdDepartamento.Equals(1))
                 {
                     //Cambiando el control que contiene actualemente el tableLayout por EmployeeControl
                     MessageBox.Show("Bienvenido empleado " + usuario.NombreUsuario);
@@ -72,8 +72,10 @@ namespace POOF_00038619
                     ec.SendUser = () => { return RegisterController.GetSpecificRegisterTable(usuario); };
                 }
                 
+                
+                
                 //Vigilante
-                else if (usuario.IdDepartamento.Equals("2"))
+                else if (usuario.IdDepartamento.Equals(2))
                 {
                     MessageBox.Show("Bienvenido vigilante " + usuario.NombreUsuario);
                     
@@ -84,7 +86,7 @@ namespace POOF_00038619
                 }
                 
                 //Administrador
-                else if (usuario.IdDepartamento.Equals("3"))
+                else if (usuario.IdDepartamento.Equals(3))
                 {
                     MessageBox.Show("Bienvenido administrador " + usuario.NombreUsuario);
                     //Cambiando el control que contiene actualemente el tableLayout por AdministratorControl
